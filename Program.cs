@@ -6,30 +6,18 @@ namespace day5
     {
         static void Main(string[] args)
         {
-            int headcount = 0;
-            int tailcount = 0;
-            int count = 6;
-
-            int temp = count;
-            Random r = new Random();
-            while (count != 0)
+            int year;
+            int inpput;
+            Console.WriteLine("Enter the Year : " );
+            int input =int.Parse (Console.ReadLine());
+            if ((input%4 == 0 && input%100 != 0) || input%400==0) ;
             {
-                double random = r.NextDouble();
-                if (random <= 0.5)
-                {
-                    headcount = headcount + 1;
-                }
-                else
-                {
-                    tailcount++;
-                }
-
-                count = count - 1;
-
+                Console.WriteLine("The Given year is Leap Year");
             }
-            Console.WriteLine(headcount * 100 / temp);
-            Console.WriteLine(tailcount * 100 / temp);
-
+            else
+            {
+                Console.WriteLine("This is not a Leap Year");
+            }
         }
     }
 }
